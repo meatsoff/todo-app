@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 520px;
+    min-height: 600px;
+    background: #000000;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    margin: 32px 0;
+    color: #fff;
+    font-size: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.complete {
+    opacity: 0.4;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-form {
+    margin: 32px 0 32px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #fcfcfc;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: #fff;
 }
+
+.todo-input::placeholder {
+    color: #e2e2e2;
+}
+
+.todo-button {
+    padding: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.todo-input.edit {
+    border: 2px solid #ffffff;
+}
+
+.todo-button.edit {
+    background: #fff;
+    padding: 16px 22px;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #000;
+    background: #fff;
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.todo-name {
+    cursor: pointer;;
+}
+
+.fns {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-fn {
+    margin-right: 10px;
+    color: #000;
+}
+
+.edit-fn {
+    color: #000;
+}
+
